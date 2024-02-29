@@ -24,3 +24,5 @@
 # 6.3 组件之间的数据传递，Props,看代码例子
 
 # 7. State & 生命周期
+# 7.1 this.state = {}
+# 7.2 this.setState({})

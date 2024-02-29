@@ -12,10 +12,18 @@ class MyComponent extends React.Component{
 
         }
     }
+    /**
+     * If state in state changes, the view will be re-rendered
+     */
     clickHandle(){
         //change flag's value
         this.setState({
             flag: !this.state.flag
+        })
+    }
+    addHandle(){
+        this.setState({
+            names : this.state.names.concat(["bread",'cookie'])
         })
     }
     render(){
@@ -41,6 +49,7 @@ class MyComponent extends React.Component{
                 {/** question what's mean bind? */}
                 <button onClick={this.clickHandle.bind(this)}>change flag</button>
                 MyComponent: {flag ? 'true': 'false'}
+                <button onClick = {this.addHandle.bind(this)}> Add name</button>
                 <ul>
                     {
                         names.map((ele,index) =>{
